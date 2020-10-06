@@ -1,0 +1,3 @@
+# matplotlibstyles
+
+Styles for matplotlib.
