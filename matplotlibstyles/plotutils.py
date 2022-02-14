@@ -134,7 +134,7 @@ def plot_segmented_colorbar(f, ax, cmap, norm, label, ticklabels, orientation):
 
 
 def darken_color(color, factor):
-    """Modify an RGB colour by multiplying its luminance by a given factor.""" 
+    """Modify an RGB colour by multiplying its luminance by a given factor."""
     darkcolor = colorsys.rgb_to_hls(*color)
     darkcolor = (darkcolor[0], darkcolor[1] * factor, darkcolor[2])
 
