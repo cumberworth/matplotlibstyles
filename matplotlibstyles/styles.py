@@ -18,6 +18,8 @@ SHARE_PGF_PREAMBLE = "\n".join(
     ]
 )
 
+TEXTBLACK = "0.125"
+
 
 def set_default_style():
 
@@ -158,7 +160,7 @@ def set_thin_latex_style():
     plt.rcParams["text.usetex"] = True
     plt.rcParams["font.family"] = "serif"
     plt.rcParams["font.serif"] = ["STIX Two Text"]
-    plt.rcParams["text.color"] = "#231f20"
+    plt.rcParams["text.color"] = TEXTBLACK
     plt.rcParams["font.size"] = 8
     plt.rcParams["axes.titlesize"] = 8
     plt.rcParams["axes.labelsize"] = 8
@@ -168,16 +170,16 @@ def set_thin_latex_style():
     plt.rcParams["pgf.preamble"] = SHARE_PGF_PREAMBLE
 
     # Axes
-    plt.rcParams["axes.edgecolor"] = "#231f20"
-    plt.rcParams["axes.labelcolor"] = "#231f20"
+    plt.rcParams["axes.edgecolor"] = TEXTBLACK
+    plt.rcParams["axes.labelcolor"] = TEXTBLACK
     plt.rcParams["axes.linewidth"] = 0.5
     plt.rcParams["axes.spines.right"] = False
     plt.rcParams["axes.spines.top"] = False
 
     # Ticks
-    plt.rcParams["xtick.color"] = "#231f20"
+    plt.rcParams["xtick.color"] = TEXTBLACK
     plt.rcParams["xtick.major.width"] = 0.5
-    plt.rcParams["ytick.color"] = "#231f20"
+    plt.rcParams["ytick.color"] = TEXTBLACK
     plt.rcParams["ytick.major.width"] = 0.5
 
     # Errorbar plots

@@ -1,11 +1,13 @@
 # Styles and helper functions for matplotlib
 
+My personal styles and helper functions for matplotlib.
+
 The latex styles use lualatex as a backend.
 
 ## Installation
 
 This package was developed and used on Linux.
-[It is available on the PyPi respository]().
+[It is available on the PyPI respository](https://pypi.org/project/matplotlibstyles/).
 It can be installed by running
 ```
 pip install matplotlibstyles
