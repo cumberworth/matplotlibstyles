@@ -1,6 +1,6 @@
 # Styles and helper functions for matplotlib
 
-My personal styles and helper functions for matplotlib.
+Styles and helper functions for matplotlib.
 
 The latex styles use lualatex as a backend.
 
