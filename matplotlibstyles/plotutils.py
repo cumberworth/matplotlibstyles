@@ -150,8 +150,8 @@ def set_line_labels_by_pos(line, ax, xpos, ha, va, label, ypos=None, yshift=0):
         line: line output from plotting
         ax: axis object
         xpos: position on x axis
-        ha: horizontal alignment (top, bottom)
-        va: vertial alignemtn (left, right)
+        ha: horizontal alignment (left, right)
+        va: vertial alignemtn (top, bottom)
         label: the label
         ypos: overide y position
         yshift: shift the calculated ypos
@@ -178,8 +178,8 @@ def set_line_labels_by_index(line, ax, index, ha, va, label, xshift=0, yshift=0)
         line: line output from plotting
         ax: axis object
         index: index into line data
-        ha: horizontal alignment (top, bottom)
-        va: vertial alignemtn (left, right)
+        ha: horizontal alignment (left, right)
+        va: vertial alignemtn (top, bottom)
         label: the label
         xshift: shift the obtained xpos
         yshift: shift the obtained ypos

@@ -5,16 +5,17 @@ from matplotlib import pyplot as plt
 
 SHARE_PGF_PREAMBLE = "\n".join(
     [
-        r"\usepackage{fontspec}",
         r"\usepackage[RGB]{xcolor}",
+        r"\usepackage{fontspec}",
         r"\usepackage{unicode-math}",
         r"\setmainfont{STIX Two Text}",
         r"\setmathfont{STIX Two Math}",
+        # r"\usepackage{stix2}",
         r"\usepackage{nicefrac}",
         r"\usepackage{siunitx}",
         r"\DeclareSIUnit{\molar}{M}",
-        r"\DeclareSIUnit{\kb}{\ensuremath{k_\textrm{B}}}",
-        r"\DeclareSIUnit{\kbT}{\ensuremath{k_\textrm{B} T}}",
+        r"\DeclareSIUnit{\kb}{\ensuremath{\mathit{k_\textrm{B}}}}",
+        r"\DeclareSIUnit{\kbT}{\ensuremath{\mathit{k_\textrm{B} T}}}",
     ]
 )
 
