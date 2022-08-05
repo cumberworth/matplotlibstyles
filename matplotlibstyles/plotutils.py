@@ -3,9 +3,17 @@
 import colorsys
 
 import matplotlib as mpl
+from matplotlib import pyplot as plt
 from matplotlib import cm
 from matplotlib import colors
 import numpy as np
+
+
+def set_constrained_layout_pads(h_pad=0.04167, w_pad=0.04167, hspace=0.02, wspace=0.02):
+    plt.rcParams["figure.constrained_layout.h_pad"] = h_pad
+    plt.rcParams["figure.constrained_layout.w_pad"] = w_pad
+    plt.rcParams["figure.constrained_layout.hspace"] = hspace
+    plt.rcParams["figure.constrained_layout.wspace"] = wspace
 
 
 def setup_shared_axis(ax):
@@ -141,7 +149,7 @@ def darken_color(color, factor):
     return colorsys.hls_to_rgb(*darkcolor)
 
 
-def set_line_labels_by_pos(line, ax, xpos, ha, va, label, ypos=None, yshift=0):
+def set_line_labels_by_pos(line, ax, xpos, ha, va, label, ypos=None, yshift=0, **kwargs):
     """Set label for line by x position.
 
     It will get the y position for the given x position and plot the label there.
@@ -166,10 +174,11 @@ def set_line_labels_by_pos(line, ax, xpos, ha, va, label, ypos=None, yshift=0):
         color=line.get_color(),
         horizontalalignment=ha,
         verticalalignment=va,
+        **kwargs
     )
 
 
-def set_line_labels_by_index(line, ax, index, ha, va, label, xshift=0, yshift=0):
+def set_line_labels_by_index(line, ax, index, ha, va, label, xshift=0, yshift=0, **kwargs):
     """Set label for line by x index.
 
     It will get the xy position for the given index and plot the label there.
@@ -193,4 +202,5 @@ def set_line_labels_by_index(line, ax, index, ha, va, label, xshift=0, yshift=0)
         color=line.get_color(),
         horizontalalignment=ha,
         verticalalignment=va,
+        **kwargs
     )

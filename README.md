@@ -2,7 +2,7 @@
 
 Styles and helper functions for matplotlib.
 
-The latex styles use lualatex as a backend.
+The latex styles use xelatex as a backend.
 
 ## Installation
 
