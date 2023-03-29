@@ -149,7 +149,9 @@ def darken_color(color, factor):
     return colorsys.hls_to_rgb(*darkcolor)
 
 
-def set_line_labels_by_pos(line, ax, xpos, ha, va, label, ypos=None, yshift=0, **kwargs):
+def set_line_labels_by_pos(
+    line, ax, xpos, ha, va, label=None, ypos=None, yshift=0, **kwargs
+):
     """Set label for line by x position.
 
     It will get the y position for the given x position and plot the label there.
@@ -165,8 +167,12 @@ def set_line_labels_by_pos(line, ax, xpos, ha, va, label, ypos=None, yshift=0, *
         yshift: shift the calculated ypos
     """
     xdata = line.get_xdata()
+    if label is None:
+        label = line.get_label()
+
     if ypos is None:
         ypos = line.get_ydata()[np.abs(xdata - xpos).argmin()]
+
     ax.text(
         xpos,
         ypos + yshift,
@@ -178,7 +184,9 @@ def set_line_labels_by_pos(line, ax, xpos, ha, va, label, ypos=None, yshift=0, *
     )
 
 
-def set_line_labels_by_index(line, ax, index, ha, va, label, xshift=0, yshift=0, **kwargs):
+def set_line_labels_by_index(
+    line, ax, index, ha, va, label=None, xshift=0, yshift=0, **kwargs
+):
     """Set label for line by x index.
 
     It will get the xy position for the given index and plot the label there.
@@ -193,6 +201,9 @@ def set_line_labels_by_index(line, ax, index, ha, va, label, xshift=0, yshift=0,
         xshift: shift the obtained xpos
         yshift: shift the obtained ypos
     """
+    if label is None:
+        label = line.get_label()
+
     xpos = line.get_xdata()[index]
     ypos = line.get_ydata()[index]
     ax.text(

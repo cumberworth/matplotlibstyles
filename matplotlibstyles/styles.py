@@ -5,9 +5,9 @@ from matplotlib import pyplot as plt
 
 SHARE_PGF_PREAMBLE = "\n".join(
     [
-        r"\usepackage[RGB]{xcolor}",
         r"\usepackage{nicefrac}",
         r"\usepackage{siunitx}",
+        r"\PassOptionsToPackage{RGB}{xcolor}",
         r"\DeclareSIUnit{\molar}{M}",
         r"\DeclareSIUnit{\kb}{\ensuremath{\mathit{k_\textsf{B}}}}",
         r"\DeclareSIUnit{\kbT}{\ensuremath{\mathit{k_\textsf{B} T}}}",
